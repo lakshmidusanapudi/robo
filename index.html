@@ -1,124 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Robo</title>
     <style>
-        body {
-    margin: 0;
-    background-color: antiquewhite;
-    
-  } 
-
-h1 {
-    text-align: center;
-    font-family:'Times New Roman', Times, serif;
-}  
-
-.head{
-    background-color: rgb(235, 167, 108);
-    border-color: black;
-    border-style: solid;
-}
-.head {
-  width: 200px;
-  margin: 0 auto;
-  height: 100px;
-  border-radius: 100px 100px 50px 50px;
-  margin-bottom: 10px;
- 
-}
-.robo:hover .head {
-  animation: head 5s;
-}
-@keyframes head {
-  0% {
-    width: 200px;
-  }
-  25% {
-    width: 200px;
-  }
-  50% {
-    width: 250px;
-  }
-
-}
-
-.mouth {
-  position: relative;
-}
-.mouth{
-  width: 20px;
-  height: 20px;
-  display: inline-block;
-  color: black;
-}
-
-
-.eyes {
-  position: relative;
-  top: 50px;
-}
-
-.eye1{
-width: 20px;
-height: 20px;
-border-radius: 15px;
-background-image: linear-gradient(
-   rgb(255, 64, 0),
-   black,
-   rgb(40, 10, 171)
-  );
-display: inline-block;
-}
-.eye1{
-margin-left: 30px;
-}
-
-.eye2{
-  width: 20px;
-  height: 20px;
-  border-radius: 15px;
-  background-image: linear-gradient(
-    rgb(255, 64, 0),
-   black,
-   rgb(40, 10, 171)
-  );
-  display: inline-block;
-}
-.eye2{
-  margin-left: 100px;
-}
-
-
-
-.body1{
-  width: 300px;
-  height: 150px;
-  margin: 0 auto;
-  display: flex;
-}
-.arm1{
-  background-color: rgb(0, 0, 0);
-  border-color: white;
-
-  border-style: solid;
-}
-.arm1{
-  width: 40px;
-  height: 125px;
-  border-radius: 50%;
-  margin-top: 20px;
-}
-.arm1{
-  margin-right: 10px;
-}
-.robo:hover .arm1 {
-  animation: arm1 2s infinite;
-}
-@keyframes arm1 {
+        body{
+            background-color: bisque;
+        }
+        .head{
+           height: 100px;
+           width: 200px;
+           border:solid Black 2px;
+           border-radius:70px 70px 30px 30px; 
+           background-color: brown;
+           position: relative;
+           top: 50px;
+           left:300px
+        }
+        .body{
+           height: 200px;
+           width: 200px;
+           border:solid Black 2px;
+           border-radius:70px 70px 70px 70px; 
+           background: linear-gradient(360deg,black 25%,orange 25%);
+           position: relative;
+           top: 60px;
+           left:300px
+        }
+        
+        .eye1{
+            height: 20px;
+           width: 20px;
+           border:solid Black 2px;
+           border-radius:70px 70px 70px 70px; 
+           background:linear-gradient(180deg,black 25%,rgb(255, 89, 0) 25%,blue );
+           position: relative;
+           bottom:220px;
+           left:350px
+        }
+        .eye2{
+            height: 20px;
+           width: 20px;
+           border:solid Black 2px;
+           border-radius:70px 70px 70px 70px; 
+           background:linear-gradient(180deg,black 25%,rgb(255, 89, 0) 25%,blue );
+           position: relative;
+         bottom:242px;
+           left:440px;
+        }
+        .hand1{
+            height: 170px;
+           width: 30px;
+           border:solid Black 2px;
+           border-radius:50%; 
+           /* background:linear-gradient(180deg,black 25%,rgb(255, 89, 0) 25%,blue ); */
+           background-color: black;
+           position: relative;
+           bottom:170px;
+           left:250px;
+        }
+        .hand2{
+            height: 170px;
+           width: 30px;
+           border:solid Black 2px;
+           border-radius:50%; 
+           /* background:linear-gradient(180deg,black 25%,rgb(255, 89, 0) 25%,blue ); */
+           background-color: black;
+           position: relative;
+           bottom:340px;
+           left:520px;}
+           .leg1{
+            height: 150px;
+           width: 30px;
+           border:solid rgb(238, 232, 232) 2px;
+           border-radius:50%;
+           background-color: black;
+           position: relative;
+           bottom:380px;
+           left:420px;}
+           .leg2{
+            height: 150px;
+           width: 30px;
+           border:solid rgb(238, 232, 232) 2px;
+           border-radius:50%;
+           background-color: black;
+           position: relative;
+           bottom:530px;
+           left:350px;}
+           .robo:hover .hand1{
+            animation: hand1 2s infinite;
+           }
+           .robo:hover .hand2{
+            animation: hand2 2s infinite;
+           }
+           @keyframes hand1 {
   0% {
     transform: rotate(0deg);
     transform-origin: top center;
@@ -132,25 +105,7 @@ margin-left: 30px;
     transform-origin: top center;
   }
 }
-
-.arm2{
-  margin-left: 10px;
-}
-.robo:hover .arm2 {
-  animation: arm2 2s infinite;
-}
-.arm2{
-  background-color: rgb(0, 0, 0);
-  border-color: white;
-  border-style: solid;
-}
-.arm2{
-  width: 40px;
-  height: 125px;
-  border-radius: 50%;
-  margin-top: 20px;
-}
-@keyframes arm2 {
+@keyframes hand2 {
   0% {
     transform: rotate(0deg);
     transform-origin: top center;
@@ -164,55 +119,8 @@ margin-left: 30px;
     transform-origin: top center;
   }
 }
-
-
-.stom{
-  background-color: silver;
-  background-image: linear-gradient(
-    360deg,
-    black 25%,
-    red 25%,
-    white 25%,
-    orange 25%
-   );
-}
-.stom{
-  width: 250px;
-  height: 200px;
-  border-radius: 50px;
-  transition: border-radius 1s;
-}
-.robo:hover .stom {
-  border-radius: 40%;
-  animation: stomach 2s infinite;
-}
-
-
-.body2 {
-  width: 200px;
-  height: 200px;
-  margin: 0 auto;
-  overflow: hidden;
-
-}
-
-
-.leg1{
-    background-color: rgb(0, 0, 0);
-    border-color:white ;
-    border-style: solid;
-}
-.leg1 {
-  margin-left: 45px;
-}
 .robo:hover .leg1 {
   animation: leg1 2s infinite;
-}
-.leg1{
-  width: 40px;
-  height: 120px;
-  border-radius: 50%;
-  display: inline-block;
 }
 @keyframes leg1 {
   0% {
@@ -224,22 +132,6 @@ margin-left: 30px;
   50% {
     transform: rotate(0deg);
   }
-}
-
-
-.leg2 {
-    margin-left: 30px;
-}
-.leg2 {
-  background-color: rgb(0, 0, 0);
-  border-color:white ;
-  border-style: solid;
-}
-.leg2 {
-  width: 40px;
-  height: 120px;
-  border-radius: 50%;
-  display: inline-block;
 }
 .robo:hover .leg2 {
     animation: leg2 2s infinite;
@@ -255,29 +147,36 @@ margin-left: 30px;
     transform: rotate(0deg);
   }
 }
+.robo:hover .head {
+    animation: head 3s infinite;
+} 
+@keyframes head {
+  0% {
+    width:200px;
+  }
+  25% {
+    width:200px;
+  }
+  50% {
+    width:250px;
+  }
+}
     </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head>
-<body >
-    <h1>DANCING ROBO</h1><br>
-  <div class="robo">
-    <div>
-      <div class="head">
-        <div class="eyes">
-          <div class="eye1"></div>
-          <div class="eye2"></div>
-          <div class="mouth"></div>
-        </div>
-      </div>
-      <div class="body1">
-        <div class="arm1"></div>
-        <div class="stom"></div>
-        <div class="arm2"></div>
-      </div>
-      <div class="body2">
-        <div class="leg1"></div>
-        <div class="leg2"></div>
-      </div>
-    </div>
-  </div>
+<body>
+    <h1 style="color: rgb(19, 181, 181); text-align: center;">DANCING ROBOT</h1>
+<div class="robo" style="align-items:center; margin-left:25%">
+    <div class="head"></div>
+    <div class="body"></div>
+    <div class="eye1"></div>
+    <div class="eye2"></div>
+    <div class="hand1"></div>
+    <div class="hand2"></div>
+    <div class="leg1"></div>
+    <div class="leg2"></div>
+</div>
 </body>
 </html>
